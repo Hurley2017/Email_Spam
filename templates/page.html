@@ -1,0 +1,51 @@
+<html>
+    
+    <head>
+        <title>Email Spam Detection</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <style>
+            form, #result {
+                text-align: center;
+            }
+            #text {
+                width: 80%;
+                height: 100px;
+                font-size: 20px;
+                border-radius: 20px;
+                padding: 10px;
+                margin: 10px;
+            }
+            #button {
+                width: 30%;
+                height: 50px;
+                font-size: 20px;
+                border-radius: 25px;
+                background-color: green;
+                color: white;
+                margin: 10px;
+            }
+            #result {
+                display: inline-block;
+                margin: 10px auto;
+                box-shadow: 5px 5px 10px gray; 
+                border-radius: 20px; 
+                background-image: linear-gradient(to right, rgb(248, 84, 55), rgb(31, 219, 47));
+                font-size: 20px; 
+                padding: 10px; 
+            }
+        </style>
+    </head>
+    
+    <body>
+        <center>
+        <h1>Email Spam Detection</h1>
+        <form>
+            <input type="text" id="text" name="text">
+            <input type="button" id="button" onclick="send()" value="Submit">
+        </form>
+        <div id="result">Pending Result</div>
+        <script src="{{ url_for('static', filename='./page.js') }}"></script>
+        </center>
+    </body>
+
+</html>
